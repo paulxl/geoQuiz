@@ -4,11 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Geology Quiz</title>
 </head>
 
 <body>
+    <h1>Let us test our basic geology knowledge</h1>
+    <h3>Flip through the slides and answer the questions</h3>
+    <h3>At the last slide hit the 'SUBMIT' button to get your results</h3>
+    <hr>
+    <div class='container'>
+        <div class='slide fade'>
+            <div class='quiznumber'>1 / 20</div>
+            <h3>Test 1</h3>
+            <form>
+                <input type="radio" name="answer" id="one" value="one">
+                <label for="one">Answer 1</label><br>
+                <input type="radio" name="answer" id="two" value="two">
+                <label for="two">Answer 2</label><br>
+                <input type="radio" name="answer" id="three" value="three">
+                <label for="three">Answer 3</label><br>
+                <input type="radio" name="answer" id="four" value="four">
+                <label for="four">Answer 4</label><br>
+            </form>
+        </div>
+        <div class='slide fade'>
+            <div class='quiznumber'>2 / 20</div>
+            <h3>Test 2</h3>
+            <form>
+                <input type="radio" name="answer" id="one" value="one">
+                <label for="one">Answer 1</label><br>
+                <input type="radio" name="answer" id="two" value="two">
+                <label for="two">Answer 2</label><br>
+                <input type="radio" name="answer" id="three" value="three">
+                <label for="three">Answer 3</label><br>
+                <input type="radio" name="answer" id="four" value="four">
+                <label for="four">Answer 4</label><br>
+            </form>
+        </div>
+        <div class='slide fade'>
+            <div class='quiznumber'>3 / 20</div>
+            <h3>Test 3</h3>
+            <form>
+                <input type="radio" name="answer" id="one" value="one">
+                <label for="one">Answer 1</label><br>
+                <input type="radio" name="answer" id="two" value="two">
+                <label for="two">Answer 2</label><br>
+                <input type="radio" name="answer" id="three" value="three">
+                <label for="three">Answer 3</label><br>
+                <input type="radio" name="answer" id="four" value="four">
+                <label for="four">Answer 4</label><br>
+            </form>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <hr>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 
 </body>
 <script src="index.js"></script>
