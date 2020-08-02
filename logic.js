@@ -1,6 +1,6 @@
 /* dealing with the questions and results of quiz  */
 /* answers to q's are as follows: 1|c   2|a    3|b   4|d   5|a    6|b    7|e    8|a    9|b   10|e    */
-let score = 0;
+
 const radioArr = ['1a', '1b', '1c', '1d', '1e',
     '2a', '2b', '2c', '2d', '2e',
     '3a', '3b', '3c', '3d', '3e',
@@ -12,7 +12,7 @@ const radioArr = ['1a', '1b', '1c', '1d', '1e',
     '9a', '9b', '9c', '9d', '9e',
     '10a', '10b', '10c', '10d', '10e'
 ];
-
+/* this resets the radio buttons aka clears them  */
 let btn2 = document.getElementById('resetRadio');
 btn2.addEventListener('click', () => {
     radioArr.forEach(function(id) {
@@ -21,6 +21,7 @@ btn2.addEventListener('click', () => {
     return false;
 });
 
+let score = 0;
 
 let btn1 = document.getElementById('getResults');
 btn1.addEventListener('click', () => {
@@ -78,6 +79,7 @@ btn1.addEventListener('click', () => {
         if (answer7.checked) {
             if (answer7.value === '7e') {
                 score++;
+                console.log(score + ' seven');
             }
         }
     });
@@ -105,5 +107,26 @@ btn1.addEventListener('click', () => {
             }
         }
     });
-    console.log(score);
+    let wrong = (10 - score);
+    document.getElementById('score').innerHTML = `You got ${score} out of 10 correct.`;
+    renderChart(score, wrong);
 });
+/* produces a pie chart of results    */
+function renderChart(score, wrong) {
+    let cData = [score, wrong];
+
+    let ctx = document.getElementById("chart").getContext("2d");
+
+    let chartG = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ['Correct', 'Missed'],
+            datasets: [{
+                data: cData,
+                borderColor: ["rgba(75, 192, 192, 1)", "rgba(192, 0, 0, 1)"],
+                backgroundColor: ["rgba(75, 192, 192, 0.2)", "rgba(192, 0, 0, 0.2)"],
+            }]
+        },
+
+    });
+}

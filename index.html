@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>Let us test our basic geology knowledge</h1>
+    <h1>A Little Geology Quiz</h1><br>
     <h3>Flip through the slides and answer the questions</h3>
     <h3><b>After</b> answering all the questions: hit the button at the bottom </h3>
     <br>
@@ -118,7 +118,7 @@
         </div>
         <div class='slide fade'>
             <div class='quiznumber'>7 / 10</div>
-            <h3>Question 6</h3>
+            <h3>Question 7</h3>
             <div class='question'>
                 <p class='qs'>Which of the following is not a type of Sedimentary Rock?</p>
                 <input type="radio" name="answer7" id="7a" value="7a">
@@ -135,7 +135,7 @@
         </div>
         <div class='slide fade'>
             <div class='quiznumber'>8 / 10</div>
-            <h3>Question 6</h3>
+            <h3>Question 8</h3>
             <div class='question'>
                 <p class='qs'>What are metamorphic rocks derived from?</p>
                 <input type="radio" name="answer8" id="8a" value="8a">
@@ -152,7 +152,7 @@
         </div>
         <div class='slide fade'>
             <div class='quiznumber'>9 / 10</div>
-            <h3>Question 6</h3>
+            <h3>Question 9</h3>
             <div class='question'>
                 <p class='qs'>Which of the following is not a type of Quartz?</p>
                 <input type="radio" name="answer9" id="9a" value="9a">
@@ -169,7 +169,7 @@
         </div>
         <div class='slide fade'>
             <div class='quiznumber'>10 / 10</div>
-            <h3>Question 6</h3>
+            <h3>Question 10</h3>
             <div class='question'>
                 <p class='qs'>Which of the following is not a copper bearing rock? </p>
                 <input type="radio" name="answer10" id="10a" value="10a">
@@ -211,12 +211,14 @@
     </div>
     <div id='resultsOfQuiz'>
         <div id='score'></div>
-        <canvas id='chart'></canvas>
+        <div id='chartContainer'>
+            <canvas id="chart"></canvas>
+        </div>
     </div>
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
 <script src="index.js"></script>
 <script src="logic.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 </html>
