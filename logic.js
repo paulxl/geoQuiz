@@ -1,12 +1,16 @@
 /* dealing with the questions and results of quiz  */
-/* answers to q's are as follows: 1|c   2|a    3|b   4|d    5|a    6|    7|    8|    9|   10|     */
+/* answers to q's are as follows: 1|c   2|a    3|b   4|d   5|a    6|b    7|e    8|a    9|b   10|e    */
 let score = 0;
 const radioArr = ['1a', '1b', '1c', '1d', '1e',
     '2a', '2b', '2c', '2d', '2e',
     '3a', '3b', '3c', '3d', '3e',
     '4a', '4b', '4c', '4d', '4e',
-    '5a', '5b', '5c', '5d', '5e',
-    '6a', '6b', '6c', '6d', '6e'
+    '5a', '5b', '5c', '5d',
+    '6a', '6b', '6c', '6d', '6e',
+    '7a', '7b', '7c', '7d', '7e',
+    '8a', '8b', '8c', '8d', '8e',
+    '9a', '9b', '9c', '9d', '9e',
+    '10a', '10b', '10c', '10d', '10e'
 ];
 
 let btn2 = document.getElementById('resetRadio');
@@ -64,7 +68,39 @@ btn1.addEventListener('click', () => {
     let six = document.getElementsByName('answer6');
     six.forEach((answer6) => {
         if (answer6.checked) {
-            if (answer6.value === '6c') {
+            if (answer6.value === '6b') {
+                score++;
+            }
+        }
+    });
+    let seven = document.getElementsByName('answer7');
+    seven.forEach((answer7) => {
+        if (answer7.checked) {
+            if (answer7.value === '7e') {
+                score++;
+            }
+        }
+    });
+    let eight = document.getElementsByName('answer8');
+    eight.forEach((answer8) => {
+        if (answer8.checked) {
+            if (answer8.value === '8a') {
+                score++;
+            }
+        }
+    });
+    let nine = document.getElementsByName('answer9');
+    nine.forEach((answer9) => {
+        if (answer9.checked) {
+            if (answer9.value === '9b') {
+                score++;
+            }
+        }
+    });
+    let ten = document.getElementsByName('answer10');
+    ten.forEach((answer10) => {
+        if (answer10.checked) {
+            if (answer10.value === '10e') {
                 score++;
             }
         }
