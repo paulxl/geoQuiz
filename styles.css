@@ -14,10 +14,6 @@ h3 {
     text-align: center;
 }
 
-body {
-    margin: 0;
-}
-
 .question {
     padding: 0 15%;
 }
@@ -75,6 +71,7 @@ body {
 
 .quiznumber {
     color: darkcyan;
+    padding-left: 5%;
 }
 
 
